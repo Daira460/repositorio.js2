@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./multi/img/images.png">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Mulish:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/estillo.css">
+    <title>Ristorante Italiano</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="contenedor-navegacion">
+            <div class="contenido-navegacion contenedor">
+                <div class="logo">
+                    <h1>Ristorante <span class="verde">Graz</span><span>ie</span><span class="rojo">Mille</span></h1>
+                </div>
+                <nav class="navegacion ocultar">
+                    <a href="./index.html">Inicio</a>
+                    <a href="./pages/nosotros.html">Sobre Nosotros</a>
+                    <a href="./pages/contacto.html">Contacto</a>
+                </nav>
+                <div class="hamburguesa">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+        <div class="contenido-header">
+            <div class="contenedor-encabezado">
+                <div class="texto-encabezado">
+                    <h2>Benvenuto!</h2>
+                    <button class="btn2" onclick="window.location.href='#session1'">Il nostro menú</button>
+                </div>
+                <video autoplay loop muted>
+                    <source src="./multi/bg_video.mp4">
+                </video>
+            </div>
+        </div>
+    </header>
+
+    <div class="contenedor-nosotros contenedor">
+        <div class="texto-nosotros">
+            <h2>Grazie Mille</h2>
+            <p>En Grazie Mille, nuestra pasión es llevar a tus sentidos una experiencia culinaria inigualable, inspirada en la rica tradición gastronómica de Italia. Desde los sabores reconfortantes de la cocina casera hasta las creaciones gourmet más refinadas, te invitamos a disfrutar de una variedad de platos que te transportarán directamente a las calles de Roma, Florencia o Nápoles.
+            </p>
+            <a href="./pages/contacto.html" class="btn btn-rojo">Contactar</a>
+        </div>
+        <div class="imagenes-nosotros">
+            <div class="imagen1">
+                <img data-src="./multi/img/joven-comiendo-pizza.jpg" alt="mujer comiendo pizza">
+                <img data-src="./multi/img/vista-frontal-concepto-deliciosas-donas.jpg" alt="plato con postre">
+            </div>
+            <div class="imagenes2">
+                <img data-src="./multi/img/dos-amigas-comiendo-pasta-restaurante-italiano (1).jpg" alt="mujeres comiendo pasta">
+                 <img data-src="./multi/img/pasta-recien-cocinada-salsa-bolonesa-parmesano-generada-ia.jpg" alt="plato con pasta">
+            </div>
+        </div>
+    </div>
+
+    <section class="menu contenedor">
+        <h2 class="texto-platillos">Platillos populares</h2>
+        <div class="botones-platillos">
+            <button class="todos btn btn-verde">Todos</button>
+            <button class="ensaladas btn btn-verde">Ensaladas</button>
+            <button class="pasta btn btn-verde">Pasta</button>
+            <button class="pizza btn btn-verde">Pizza</button>
+            <button class="postres btn btn-verde">Postres</button>
+        </div>
+        <div id="carrito" class="oculto">
+            <h3>Carrito de compras</h3>
+            <ul id="lista-productos"></ul>
+            <button id="vaciar-carrito" class="btn btn-rojo">Vaciar carrito</button>
+            <p>Total: <span id="total">$0.00</span></p>
+            <button id="finalizar-compra" class="btn btn-verde">Finalizar compra</button>
+        </div>
+    
+        <div class="platillos" id="session1">
+            <div class="platillo" data-platillo="ensalada">
+                <img data-src="./multi/img/ensalada-caprese-queso-mozzarella-cuenco.jpg" alt="ensalada">
+                <p>Tomates maduros,
+                    Mozzarella fresca y
+                    Hojas de albahaca fresca.</p>
+                <div class="precio">
+                    <p>$1450</p>
+                    <button class="btn-agregar-carrito" data-nombre="Ensalada Caprese" data-precio="1450">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="ensalada">
+                <img data-src="./multi/img/ensalada-panzanella.png">
+                <p>Pan ciabatta,Tomates,Aceitunas negras, Perejil, Cebolla morada y Albahaca.</p>
+                <div class="precio">
+                    <p>$1580</p>
+                    <button class="btn-agregar-carrito" data-nombre="Ensalada Panzanella" data-precio="1580">Agregar al carrito</button>
+
+                </div>
+            </div>
+            <div class="platillo" data-platillo="ensalada">
+                <img data-src="./multi/img/ensalada-mariscos.png" alt="ensalada">
+                <p>Camarones,Toronja,Aguacate,Pepino y un mixto de hojas verdes.</p>
+                <div class="precio">
+                    <p>$1840</p>
+                    <button class="btn-agregar-carrito" data-nombre="Ensalada Mariscos" data-precio="1840">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pasta">
+                <img data-src="./multi/img/comida-estilo-vida-spaghetti-foodie-gastronomia.jpg" alt="pasta">
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio">
+                    <p>$2100</p>
+                    <button class="btn-agregar-carrito" data-nombre="Fideos Spaghetti" data-precio="2100">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pasta">
+                <img data-src="./multi/img/lasana-clasica-salsa-bolonesa.jpg" alt="pasta">
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio">
+                    <p>$2520</p>
+                    <button class="btn-agregar-carrito" data-nombre="Lasaña" data-precio="2520">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pasta">
+                <img data-src="./multi/img/pastas-almeja.png" alt="pasta">
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio">
+                    <p>$2940</p>
+                    <button class="btn-agregar-carrito" data-nombre="Fideos Almeja" data-precio="2940">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="./multi/img/pizza123.png" alt="pizza">
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio">
+                    <p>$1750</p>
+                    <button class="btn-agregar-carrito" data-nombre="Pizza1" data-precio="1750">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="./multi/img/hora-pizza-sabrosa-pizza-tradicional-casera-receta-italiana.jpg" alt="pizza">
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio">
+                    <p>$1840</p>
+                    <button class="btn-agregar-carrito" data-nombre="Pizza2" data-precio="1840">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="pizza">
+                <img data-src="./multi/img/vista-superior-pizza-pepperoni-salchichas-champinones-pimiento-verde-oliva-maiz-madera-negra.jpg" alt="pizza">
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio">
+                    <p>$1990</p>
+                    <button class="btn-agregar-carrito" data-nombre="Pizza3" data-precio="1990">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="postre">
+                <img data-src="./multi/img/deliciosos-cannoli.jpg" alt="postre">
+                <h4>.CANNOLI.</h4>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio">
+                    <p>$1050</p>
+                    <button class="btn-agregar-carrito" data-nombre="Postre Cannoli" data-precio="1050">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="postre">
+                <img data-src="./multi/img/panna-cotta.png" alt="postre">
+                <h4>.PANNA COTTA.</h4>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio">
+                    <p>$1480</p>
+                    <button class="btn-agregar-carrito" data-nombre="Postre pannacotta" data-precio="1480">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="platillo" data-platillo="postre">
+                <img data-src="./multi/img/tiramisu-foto.png" alt="postre">
+                <h4>.TIRAMISU.</h4>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio">
+                    <p>$1900</p>
+                    <button class="btn-agregar-carrito" data-nombre="Postre Tiramisu" data-precio="1900">Agregar al carrito</button>
+                </div>
+            </div>
+        
+    </section>
+
+    <div class="separador">
+        <div class="contenido-separador contenedor">
+            <h2>Comienza tu mañana con un festín de cocina italiana</h2>
+            <p>Da inicio a tu día saboreando auténtica comida italiana o disfrutando de un café estilo italiano con postres deliciosos.</p>
+            <a href="./index.html" class="btn btn-verde">Ordenar ahora</a>
+        </div>
+    </div>
+
+    <section class="chef contenedor">
+        <h2>Chef ejecutivo</h2>
+        <div class="contenido-chef">
+            <div class="texto-chef">
+                <p>
+                    "En nuestra cocina, cada plato es una obra de arte culinaria, cuidadosamente elaborada con pasión y tradición italiana. Estamos listos para deleitar tus sentidos y transportarte a la esencia misma de la gastronomía italiana."
+                </p>
+            </div>
+            <div class="imagen-chef">
+                <img data-src="./multi/img/retrato-chef-sonriente-uniforme.jpg" alt="fotografia del chef">
+            </div>
+        </div>
+    </section>
+    <video autoplay loop muted>
+        <source src="./multi/X2Download.app-Osteria Lucio Italian Restaurant Promo Video (online-video-cutter.com).mp4"> 
+    </video>
+
+    <div class="formulario-contacto contenedor">
+
+        <div class="informacion-contacto">
+            <h3>Contactanos</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Av. Costanera Rafael Obligado 4584</p>
+            <p><i class="fas fa-envelope"></i>GrazieMille-@hotmail.com</p>
+            <p><i class="fas fa-phone-alt"></i>+5491184628069</p>
+            <div class="redes-sociales">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+    <div class="pie-pagina">
+        <div class="contenedor-piepagina contenedor">
+            <div class="info">
+                <h3>Dirección</h3>
+                <p> Av. Costanera Rafael Obligado 4584</p>
+            </div>
+            <div class="info">
+                <h3>Días especiales</h3>
+                <p>Sabados y Domingos 11am - 20pm</p>
+            </div>
+            <div class="info">
+                <h3>Horarios</h3>
+                <p>Lunes - Viernes 8am - 23pm</p>
+                <div class="redes-sociales redes-pie">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="info">
+                <h3>Noticias</h3>
+                <p>suscribete para recibir más noticias</p>
+                <input type="email" placeholder="Tu correo">
+                <input type="submit" class="btn btn-verde" value="Suscribirse">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Ristorante <span class="verde">Graz</span><span>ie</span><span class="rojo">Mille</span> Todos los derechos reservados &copy; 2023 </p>
+    </footer>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
