@@ -10,7 +10,7 @@
     <title>Ristorante Italiano | Contacto</title>
 
 </head>
-<body>
+<body class="body2">
     <header class="encabezado">
         <div class="contenedor-navegacion">
             <div class="contenido-navegacion contenedor">
@@ -30,29 +30,27 @@
         </div>
         </div>
     </header>
-    <form class="formulario">
+    <form class="formulario" id="contactForm">
         <div class="form">
             <h1 class="form1">CONTACTO</h1>
-        <label>Nombre:</label>
-        <input type="texto" name="nombre" placeholder="Escribe tu nombre:">
-        <label>Apellido:</label>
-        <input type="texto" name="apellido" placeholder="Escribe tu apellido">
-        <label>Email*:</label>
-        <input type="texto" name="email" placeholder="Escribe tu e-mail">
-        <label>Escribe tu mensaje:</label>
-        <textarea name="mensaje"></textarea>
-        <label for="privacy">He leído y acepto la política de privacidad, los términos y condiciones.</label>
-        <input type="checkbox" id="privacy">
-        <input type="button" value="Enviar formulario">
-        <input type="button" value="Borrar">
-         </div>
-        
+            <label>Nombre:</label>
+            <input type="text" name="nombre" placeholder="Escribe tu nombre:">
+            <label>Apellido:</label>
+            <input type="text" name="apellido" placeholder="Escribe tu apellido">
+            <label>Email*:</label>
+            <input type="text" name="email" placeholder="Escribe tu e-mail">
+            <label>Escribe tu mensaje:</label>
+            <textarea name="mensaje"></textarea>
+            <label for="privacy">He leído y acepto la política de privacidad, los términos y condiciones.</label>
+            <input type="checkbox" id="privacy">
+            <input type="button" value="Enviar formulario" id="submitBtn">
+            <input type="button" value="Borrar" id="resetBtn">
+        </div>
     </form>
-    </div>
     <footer class="footer">
         <p>Ristorante <span class="verde">Graz</span><span>ie</span><span class="rojo">Mille</span> Todos los derechos reservados &copy; 2023 </p>
     </footer>
-    <script src="./js/main.js"></script>
+    <script src="../js/contacto.js"></script>
     
 </body>
 </html>
