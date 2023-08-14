@@ -1,0 +1,16 @@
+[
+    {
+      "nombre": "Ensalada Caprese",
+      "tipo": "ensalada",
+      "imagen": "./multi/img/ensalada-caprese-queso-mozzarella-cuenco.jpg",
+      "descripcion": "Tomates maduros, Mozzarella fresca y Hojas de albahaca fresca.",
+      "precio": 1450
+    },
+    {
+      "nombre": "Ensalada Panzanella",
+      "tipo": "ensalada",
+      "imagen": "./multi/img/ensalada-panzanella.png",
+      "descripcion": "Pan ciabatta, Tomates, Aceitunas negras, Perejil, Cebolla morada y Albahaca.",
+      "precio": 1580
+    }
+  ]
