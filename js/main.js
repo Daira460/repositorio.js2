@@ -202,46 +202,6 @@ function cargarCarritoDesdeStorage() {
 document.addEventListener('DOMContentLoaded', () => {
   cargarCarritoDesdeStorage();
 });
-// main.js
-document.addEventListener('DOMContentLoaded', async () => {
-  try {
-      const response = await fetch('menu.json');
-      const menu = await response.json();
-
-      const platillosContainer = document.getElementById('session1');
-
-      menu.forEach(platillo => {
-          const platilloElement = document.createElement('div');
-          platilloElement.classList.add('platillo');
-          platilloElement.setAttribute('data-platillo', platillo.tipo);
-
-          const imagen = document.createElement('img');
-          imagen.setAttribute('data-src', platillo.imagen);
-          imagen.alt = platillo.nombre;
-
-          const descripcion = document.createElement('p');
-          descripcion.textContent = platillo.descripcion;
-
-          const precio = document.createElement('div');
-          precio.classList.add('precio');
-          const precioTexto = document.createElement('p');
-          precioTexto.textContent = `$${platillo.precio}`;
-          const botonAgregar = document.createElement('button');
-          botonAgregar.classList.add('btn-agregar-carrito');
-          botonAgregar.textContent = 'Agregar al carrito';
-          botonAgregar.dataset.nombre = platillo.nombre;
-          botonAgregar.dataset.precio = platillo.precio;
-
-          precio.appendChild(precioTexto);
-          precio.appendChild(botonAgregar);
-
-          platilloElement.appendChild(imagen);
-          platilloElement.appendChild(descripcion);
-          platilloElement.appendChild(precio);
-
-          platillosContainer.appendChild(platilloElement);
-      });
-  } catch (error) {
-      console.error('Error al cargar el menú:', error);
-  }
-});
+fetch('https://jsonplaceholder.typicode.com/users/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
