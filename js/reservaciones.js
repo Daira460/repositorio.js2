@@ -91,6 +91,7 @@ function closeModal() {
   modal.style.display = 'none';
 }
 
+// Codigo para mostrar Sweet Alert cuando se realiza una reserva con éxito
 reservationForm.addEventListener('submit', function(event) {
   event.preventDefault();
   const name = nameInput.value.trim();
@@ -101,6 +102,12 @@ reservationForm.addEventListener('submit', function(event) {
     reservations.push(reservation);
     updateCalendar();
     closeModal();
+
+    // Mostrar mensaje de éxito con Sweet Alert
+    Swal.fire({
+      icon: 'success',
+      title: '¡Reserva realizada con éxito!'
+    });
 
     // Mostrar la reserva en la consola
     console.log('Reserva realizada:');
