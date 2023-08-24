@@ -1,9 +1,8 @@
-fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.json())
     .then((json) =>
 
       json.forEach((comentario) => {
-        console.log(comentario.body)
 })
 );
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const clientesLista = document.getElementById('clientesLista');
 
     botonCargar.addEventListener('click', () => {
-        fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+        fetch('https://jsonplaceholder.typicode.com/users')
             .then((response) => response.json())
             .then((json) => {
                 const primerosTresComentarios = json.slice(0, 3); // Tomar solo los primeros tres comentarios
